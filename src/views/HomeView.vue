@@ -7,7 +7,7 @@
 
     <div class="w-1/2 flex justify-center">
 
-      <form class=" bg-gray-600/70 py-5 px-8  rounded">
+      <form class=" bg-transparent/10 py-5 px-8  rounded">
 
         <p class="text-3xl text-white mb-8">Join Tareas now</p>
 
