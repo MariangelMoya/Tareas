@@ -7,12 +7,14 @@
     <main>
       <RouterView/>
     </main>
+    <Footer></Footer>
   </div>
 </template>
 <script setup lang="ts">
 import {RouterView, useRoute} from 'vue-router'
 import Navbar from '@/components/Navbar.vue'
 import {ref, watch} from "vue";
+import Footer from '@/components/Footer.vue'
 
 const defaultBg = 'https://www.todofondos.net/wp-content/uploads/todofondos-4KparaPC5.jpg'
 const route = useRoute()
