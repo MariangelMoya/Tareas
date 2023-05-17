@@ -12,7 +12,7 @@
 }
 
 .inputs-register {
-    @apply py-2 px-4 w-80 bg-white/70 text-white rounded
+    @apply py-2 px-4 w-80 bg-white/70 border-none text-white rounded
 }
 
 input:-webkit-autofill,
@@ -20,22 +20,46 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
     transition: background-color 5000000s ease-in-out 0s;
-    -webkit-animation: autofill 0s forwards;
-    animation: autofill 0s forwards;
+    -webkit-animation: bgInputTransparent 0s forwards;
+    animation: bgInputTransparent 0s forwards;
     -webkit-box-shadow:0 0 0 50px transparent inset; /* Change the color to your own background color */
     -webkit-text-fill-color: white;
 }
 
-@keyframes autofill {
+input.inputs-register:-webkit-autofill,
+input.inputs-register:-webkit-autofill:hover,
+input.inputs-register:-webkit-autofill:focus,
+input.inputs-register:-webkit-autofill:active {
+    transition: background-color 5000000s ease-in-out 0s;
+    -webkit-animation: bgInputWhite 0s forwards;
+    animation: bgInputWhite 0s forwards;
+    -webkit-box-shadow:0 0 0 50px transparent inset; /* Change the color to your own background color */
+    -webkit-text-fill-color: gray;
+}
+
+@keyframes bgInputTransparent {
     100% {
         background: transparent;
         color: inherit;
     }
 }
 
-@-webkit-keyframes autofill {
+@-webkit-keyframes bgInputTransparent {
     100% {
         background: transparent;
+        color: inherit;
+    }
+}
+@keyframes bgInputWhite {
+    100% {
+        background: rgb(255 255 255 / 0.7);
+        color: inherit;
+    }
+}
+
+@-webkit-keyframes bgInputWhite {
+    100% {
+        background: rgb(255 255 255 / 0.7);
         color: inherit;
     }
 }

@@ -41,6 +41,9 @@
 import {EnvelopeIcon, LockClosedIcon, UserIcon} from '@heroicons/vue/24/solid'
 import {ref} from "vue";
 import {useAuthStore} from "@/stores/auth";
+import {useRouter} from "vue-router";
+
+const router = useRouter()
 
 const authStore = useAuthStore()
 
@@ -51,6 +54,8 @@ let login = () => {
   if (email.value === 'admin' && password.value === 'admin') {
     authStore.auth = true
     console.log('hola')
+
+    router.push('/board')
   }
 }
 
